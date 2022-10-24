@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}
+Find Rx
+{% endblock %}
+
+{% block content %}
+<h1 align="center">Find Rx</h1>
+
+<form action="/" align="center">
+    <label for="fname">Patient's name:</label>
+    <input type="text" id="fname" name="fname" value="{{''}}">
+    <input type="submit" value="Submit">
+    {% if not rec %}
+    <h2 align="center"><font color='red'>No patients found</font></h2>
+    {% endif%}
+    </script>
+
+    <div align="center">
+        <table class="table">
+        <thead>
+        <tr>
+            <td scope="col"><b>Rx #</b></td>
+            <td scope="col"><b>Name</b></td>
+            <td scope="col"><b>DOB</b></td>
+            <td scope="col"><b>Address</b></td>
+            <td scope="col"><b>Date Prescribed</b></td>
+            <td scope="col"><b>Drug</b></td>
+        </tr>
+        <tr>
+            <td scope="col">{{rec.prescription_number}}</td>
+            <td scope="col">{{rec.patient_name}}</td>
+            <td scope="col">{{rec.date_of_birth}}</td>
+            <td scope="col">{{rec.address}}</td>
+            <td scope="col">{{rec.date_prescribed}}</td>
+            <td scope="col">{{rec.drug_name}}</td>
+        </tr>
+        </thead>
+        </table>
+    </div>
+</form>
+{% endblock %}
+
+
+

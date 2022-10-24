@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %} 
+Patient Records 
+{% endblock %}
+
+{% block content %}
+<h1 align="center">New Rx</h1>
+
+
+<form method="POST" align="center">
+    <div class="form-group">
+        <label for="prescription_number">Prescription #</label>
+        <input class="form-control" type="integer" id="prescription_number" name="prescription_number" placeholder="Must be 4 digits"/>
+    </div>
+    <div class="form-group">
+        <label for="patient_name">Patient's Name (Last, First)</label>
+        <input class="form-control" type="text" id="patient_name" name="patient_name" placeholder="Patient's name"/>
+    </div>
+    <div class="form-group">
+        <label for="date_of_birth">Date of Birth</label>
+        <input class="form-control" type="text" id="date_of_birth" name="date_of_birth" placeholder="Date of Birth" />
+    </div>
+    <div class="form-group">
+        <label for="address">Address</label>
+        <input class="form-control" type="text" id="address" name="address" placeholder="Address">
+    </div>
+    <div class="form-group">
+        <label for="date_prescribed">Date Prescribed</label>
+        <input class="form-control" text="text" id="date_prescribed" name="date_prescribed" placeholder="Date Prescribed"/>
+    </div> 
+    <div class="form-group">
+        <label for="drug_name">Drug Name</label>
+        <input class="form-control" type="text" id="drug_name" name="drug_name" placeholder="Drug"/>
+    </div>
+    <br />
+    <button class="btn btn-primary" type="submit">Submit</button>
+</form>
+
+
+{% endblock %}
