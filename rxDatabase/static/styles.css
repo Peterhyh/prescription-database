@@ -1,0 +1,28 @@
+.navbar {
+    background-image: linear-gradient(to right, #080E15, #1D2840)
+}
+
+body {
+    background-image: linear-gradient(to right, #304053, #61707D, #BBC1C5)
+}
+
+.card-header {
+    background-image: linear-gradient(to right, #080E15, #1D2840)
+}
+
+thead {
+    color: white;
+
+}
+
+tbody {
+    color: white;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.nav-item {
+    font-family: 'Montserrat', sans-serif;
+}

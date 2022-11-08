@@ -82,6 +82,9 @@ def newrx():
         patient_name = request.form.get("patient_name")
         date_of_birth = request.form.get("date_of_birth")
         address = request.form.get("address")
+        city = request.form.get("city")
+        state = request.form.get("state")
+        zipcode = request.form.get("zipcode")
         drug_name = request.form.get("drug_name")
         date_prescribed= request.form.get("date_prescribed")
 
@@ -98,6 +101,13 @@ def newrx():
             flash("Drug name is required.", category="error")
         if len(date_prescribed) < 8:
             flash("Prescription date must be valid (e.g. MM/DD/YYYY)", category="error")
+        if len(zipcode) != 5:
+            flash("Please enter a valid zipcode.", category="error")
+        if len(state) != 2:
+            flash("Please select one of the following states.",category="error")
+        if len(city) < 3:
+            flash("Please enter a valid city name.",category="error")
+
         else:
             new_patient = Record(
                 prescription_number=form['prescription_number'], 
@@ -105,6 +115,9 @@ def newrx():
                 patient_name=patient_name,
                 date_of_birth=date_of_birth,
                 address=address,
+                city=city,
+                state=state,
+                zipcode=zipcode,
                 date_prescribed=date_prescribed,
                 drug_name=drug_name
                 )

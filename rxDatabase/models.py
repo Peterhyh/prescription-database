@@ -17,3 +17,6 @@ class Record(db.Model):
     address=db.Column(db.String(150))
     date_prescribed=db.Column(db.String(150))
     drug_name=db.Column(db.String(150))
+    city=db.Column(db.String)
+    state=db.Column(db.String)
+    zipcode=db.Column(db.Integer)

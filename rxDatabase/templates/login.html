@@ -1,4 +1,4 @@
-{% extends "base.html" %} 
+{% extends "index.html" %} 
 
 {% block title %}
 Login
@@ -6,22 +6,25 @@ Login
 
 
 {% block content %}
-
-<form method = "POST" align="center">
-    <h3>Login</h3>
-
-    <div class="form-group">
-        <label for="email">Email:</label>
-        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email" placeholder="Enter email" />
+<div class="container">
+    <div class="row row-content">
+        <div class="col col-sm-5 mx-auto">
+            <div class="card mt-3">
+                <h2 class="card-header bg-dark text-white rounded">Login<h2>
+                <div class="card-body mx-auto rounded">
+                    <form class="form-group" method="POST" align="center">
+                        <div class="col col-sm-6 mx-auto mb-1">
+                            <input type="email" class="form-control" aria-describedby="emailHelp" name="email" placeholder="Enter email" />
+                        </div>
+                        <div class="col col-sm-6 mx-auto">
+                            <input type="password" class="form-control" name="password" placeholder="Password" />
+                        </div>
+                        <br />
+                        <button class="btn btn-primary" type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-    
-
-    <div class="form-group">
-        <label for="password">Password:</label>
-        <input type="password" class="form-control" id="password" name="password" placeholder="Password" />
-    </div>
-    <br />
-    <button class="btn btn-primary" type="submit">Submit</button>
-</form>
-
+</div>
 {% endblock %}

@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "index.html" %}
 
 {% block title %}
 Sign Up
@@ -6,31 +6,36 @@ Sign Up
 
 {% block content %}
 
-
-<form method = "POST">
-    <div class="signup-form">
-        <h3 align="center">Sign Up</h3>
-        <div align="center">
-            <label for="email">Email Address</label>
-            <input type="email" class="form-control" id="email" name="email" placeholder="Email"/>
-        </div>
-        <div align="center">
-            <label for="firstName">Name</label>
-            <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Name" />
-        </div>
-        <div align="center">
-            <label for="password1">Password</label>
-            <input type="password" class="form-control" id="password1" name="password1" placeholder="Password" />
-        </div>
-        <div align="center">
-            <label for="password2"> Confirm Password</label>
-            <input type="password" class="form-control" id="password2" name="password2" placeholder="Confirm Password" />
-        </div>
-        <br /> 
-        <div align=" center">
-            <button class="btn btn-primary" type="submit">Submit</button>
+<div class="container">
+    <div class="row row-content">
+        <div class="col col-sm-7 mx-auto">
+            <div class="card mt-3 rounded">
+                <h2 class="card-header bg-dark text-white rounded">Sign Up</h2>
+                <div class="card-body">
+                    <form class="form-group" method = "POST">
+                        <div class="col col-sm-6 signup-form mx-auto">
+                            <div align="center">
+                                <input type="email" class="form-control mb-1" name="email" placeholder="Email"/>
+                            </div>
+                            <div align="center">
+                                <input type="text" class="form-control mb-1" name="firstName" placeholder="Name" />
+                            </div>
+                            <div align="center">
+                                <input type="password" class="form-control mb-1" name="password1" placeholder="Password" />
+                            </div>
+                            <div align="center">
+                                <input type="password" class="form-control mb-1" name="password2" placeholder="Confirm Password" />
+                            </div>
+                            <br /> 
+                            <div align=" center">
+                                <button class="btn btn-primary" type="submit">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
-</form>
+</div>
 
 {% endblock %}

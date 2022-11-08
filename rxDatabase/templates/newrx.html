@@ -1,41 +1,102 @@
-{% extends "base.html" %}
+{% extends "index.html" %}
 
 {% block title %} 
 Patient Records 
 {% endblock %}
 
 {% block content %}
-<h1 align="center">New Rx</h1>
 
-
-<form method="POST" align="center">
-    <div class="form-group">
-        <label for="prescription_number">Prescription #</label>
-        <input class="form-control" type="integer" id="prescription_number" name="prescription_number" placeholder="Must be 4 digits"/>
+<div class="container">
+    <div class="row">
+        <div class="col mx-auto">
+            <div class="card mt-3">
+                <h2 class="card-header bg-dark text-white">Patient Data Entry</h2>
+                <div class="card-body mx-auto">
+                    <form class="form-group" method="POST" align="center">
+                        <div class="row">
+                            <input class="form-control col col-sm-5 mb-1" type="integer" name="prescription_number" placeholder="Rx#"/>
+                        </div>
+                        <div class="row">
+                            <input class="form-control col col-sm-5 mb-1" type="text" name="date_of_birth" placeholder="Date of Birth (MM/DD/YYYY)" />
+                        </div>
+                        <div class="row">
+                            <input class="form-control col col-sm-10 mr-1 mb-1" type="text" name="patient_name" placeholder="Last name, first name"/>
+                        </div>
+                        <div class="row">
+                            <input class="form-control col col-sm-10 mb-1" type="text" name="address" placeholder="Street address">
+                        </div>
+                        <div class="row">
+                            <input class="form-control col col-sm-3" type="text" name="city" placeholder="City">
+                            <select class="form-control col col-sm-2 ml-1" name="state" id="state">
+                                <option value="" selected="selected">State</option>
+                                <option value="AL">AL</option>
+                                <option value="AK">AK</option>
+                                <option value="AZ">AZ</option>
+                                <option value="AR">AR</option>
+                                <option value="CA">CA</option>
+                                <option value="CO">CO</option>
+                                <option value="CT">CT</option>
+                                <option value="DE">DE</option>
+                                <option value="DC">DC</option>
+                                <option value="FL">FL</option>
+                                <option value="GA">GA</option>
+                                <option value="HI">HI</option>
+                                <option value="ID">ID</option>
+                                <option value="IL">IL</option>
+                                <option value="IN">IN</option>
+                                <option value="IA">IA</option>
+                                <option value="KS">KS</option>
+                                <option value="KY">KY</option>
+                                <option value="LA">LA</option>
+                                <option value="ME">ME</option>
+                                <option value="MD">MD</option>
+                                <option value="MA">MA</option>
+                                <option value="MI">MI</option>
+                                <option value="MN">MN</option>
+                                <option value="MS">MS</option>
+                                <option value="MO">MO</option>
+                                <option value="MT">MT</option>
+                                <option value="NE">NE</option>
+                                <option value="NV">NV</option>
+                                <option value="NH">NH</option>
+                                <option value="NJ">NJ</option>
+                                <option value="NM">NM</option>
+                                <option value="NY">NY</option>
+                                <option value="NC">NC</option>
+                                <option value="ND">ND</option>
+                                <option value="OH">OH</option>
+                                <option value="OK">OK</option>
+                                <option value="OR">OR</option>
+                                <option value="PA">PA</option>
+                                <option value="RI">RI</option>
+                                <option value="SC">SC</option>
+                                <option value="SD">SD</option>
+                                <option value="TN">TN</option>
+                                <option value="TX">TX</option>
+                                <option value="UT">UT</option>
+                                <option value="VT">VT</option>
+                                <option value="VA">VA</option>
+                                <option value="WA">WA</option>
+                                <option value="WV">WV</option>
+                                <option value="WI">WI</option>
+                                <option value="WY">WY</option>
+                              </select>
+                            <input class="form-control col col-sm-3 ml-1 mb-1" type="text" name="zipcode" placeholder="Zip code">
+                        </div>
+                        <div class="row">
+                            <input class="form-control col col-sm-10 mb-1" type="text" name="date_prescribed" placeholder="Date Prescribed(MM/DD/YYYY)"/>
+                        </div> 
+                        <div class="row">
+                            <input class="form-control col col-sm-10" type="text" name="drug_name" placeholder="Drug"/>
+                        </div>
+                        <br />
+                        <button class="btn btn-primary" type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="form-group">
-        <label for="patient_name">Patient's Name (Last, First)</label>
-        <input class="form-control" type="text" id="patient_name" name="patient_name" placeholder="Patient's name"/>
-    </div>
-    <div class="form-group">
-        <label for="date_of_birth">Date of Birth</label>
-        <input class="form-control" type="text" id="date_of_birth" name="date_of_birth" placeholder="Date of Birth" />
-    </div>
-    <div class="form-group">
-        <label for="address">Address</label>
-        <input class="form-control" type="text" id="address" name="address" placeholder="Address">
-    </div>
-    <div class="form-group">
-        <label for="date_prescribed">Date Prescribed</label>
-        <input class="form-control" text="text" id="date_prescribed" name="date_prescribed" placeholder="Date Prescribed"/>
-    </div> 
-    <div class="form-group">
-        <label for="drug_name">Drug Name</label>
-        <input class="form-control" type="text" id="drug_name" name="drug_name" placeholder="Drug"/>
-    </div>
-    <br />
-    <button class="btn btn-primary" type="submit">Submit</button>
-</form>
+</div>
 
 
 {% endblock %}
